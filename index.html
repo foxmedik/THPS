@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THPS 1+2 Speed Run Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+        label, input, select, button {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>THPS 1+2 Speed Run Tracker</h1>
+    <form id="runForm">
+        <label for="playerName">Player Name:</label>
+        <input type="text" id="playerName" name="playerName" required>
+        
+        <label for="levelName">Level Name:</label>
+        <input type="text" id="levelName" name="levelName" required>
+        
+        <label for="runTime">Run Time (in seconds):</label>
+        <input type="number" id="runTime" name="runTime" required>
+        
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty" name="difficulty" required>
+            <option value="par">Par</option>
+            <option value="hard">Hard</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Run Times</h2>
+    <ul id="runTimesList"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
